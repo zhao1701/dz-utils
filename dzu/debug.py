@@ -5,7 +5,7 @@ def trace(func):
     @ft.wraps(func)
     def wrapper(*args, **kwargs):
         print(
-            'TRACE: Calling {}() with position arguments {} and '
+            'TRACE: Calling {}() with positional arguments {} and '
             'keyword arguments {}'.format(
                 func.__name__, args, kwargs))
         result = func(*args, **kwargs)
