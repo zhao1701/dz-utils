@@ -6,3 +6,6 @@ dz_utils.egg-info/not-zip-safe
 dz_utils.egg-info/top_level.txt
 dzu/__init__.py
 dzu/debug.py
+dzu/function.py
+dzu/io.py
+dzu/path.py

@@ -1,0 +1,5 @@
+numpy~=1.18.1
+setuptools~=45.2.0
+yaml~=0.1.7
+pyyaml~=5.3
+pytest~=5.4.1
