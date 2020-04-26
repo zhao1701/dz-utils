@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from file_io import *
+from dzu.file_io import *
 
 
 @pytest.fixture
@@ -25,9 +25,8 @@ def text_lines():
 
 class TestJSON:
 
-    def test_write_read_json(self, tmpdir, data_dict):
-        tmpdir = Path(tmpdir)
-        path = tmpdir / 'test.json'
+    def test_write_read_json(self, tmp_path, data_dict):
+        path = tmp_path / 'test.json'
         write_json(path, data_dict)
         read_dict = read_json(path)
         assert(read_dict == data_dict)
@@ -35,9 +34,8 @@ class TestJSON:
 
 class TestYAML:
 
-    def test_write_read_yaml(self, tmpdir, data_dict):
-        tmpdir = Path(tmpdir)
-        path = tmpdir / 'test.json'
+    def test_write_read_yaml(self, tmp_path, data_dict):
+        path = tmp_path / 'test.json'
         write_yaml(path, data_dict)
         read_dict = read_yaml(path)
         assert(read_dict == data_dict)
@@ -45,9 +43,8 @@ class TestYAML:
 
 class TestText:
 
-    def test_write_read_text(self, tmpdir, text_lines):
-        tmpdir = Path(tmpdir)
-        path = tmpdir / 'test.txt'
+    def test_write_read_text(self, tmp_path, text_lines):
+        path = tmp_path / 'test.txt'
         write_text(path, text_lines)
         read_lines = read_text(path)
         assert(read_lines == text_lines)

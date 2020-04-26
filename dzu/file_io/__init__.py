@@ -1,7 +1,7 @@
 import json
 import yaml
 
-from path import check_path
+from dzu.path import check_path
 
 
 def read_text(file):
